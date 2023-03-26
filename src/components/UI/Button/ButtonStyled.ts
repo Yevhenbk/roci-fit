@@ -6,7 +6,7 @@ export const buttonStyles = cva(
     variants: {
       intent: {
         primary: 'text-blue-500',
-        secondary: 'bg-orange-800 p-4 text-white'
+        secondary: 'bg-orange-800 p-4 text-white h-5rem'
       },
       fullWidth: {
         true: 'w-[100vw]'
