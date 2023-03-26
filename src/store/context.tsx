@@ -1,5 +1,6 @@
 import { 
-  createContext, useState, ReactNode, useEffect } from 'react'
+  createContext, useState, ReactNode, useEffect, useRef
+ } from 'react'
 
 export const Context = createContext<any>('')
 
@@ -9,17 +10,33 @@ interface Props {
 
 const ContextProvider: React.FC<Props> = (props) => {
   
-  const [fadeIn, setFadeIn] = useState<boolean>(false)  
+    const [visible, setVisible] = useState(false)
+    const ref = useRef<HTMLDivElement>(null)
   
-  const test: string = 'I come from context' 
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setVisible(true)
+          }
+        },
+        { threshold: 0.1 }
+      )
   
-  useEffect(() => {
-    setFadeIn(true);
-  }, [])
+      if (ref.current) {
+        observer.observe(ref.current)
+      }
+  
+      return () => {
+        if (ref.current) {
+          observer.unobserve(ref.current)
+        }
+      }
+    }, [])
 
   return (
     <Context.Provider 
-      value={{ test, fadeIn, setFadeIn }}
+      value={{ ref, visible }}
     >
       {props.children}
     </Context.Provider>
