@@ -9,17 +9,17 @@ interface Props {
 
 const FadeInContainer: FC<Props> = (props) => {
 
-  const { fadeIn } = useContext(Context)
+  const { ref, visible } = useContext(Context)
   const duration: 1 | 2 | 3 | 4 = props.duration
 
   return (
-    <div className={classNames('opacity-0 transform transition ease-out', {
-      'opacity-100 translate-y-0': fadeIn,
-      'translate-y-2/4': !fadeIn,
-      'duration-1000': fadeIn && duration === 1,
-      'duration-700': fadeIn && duration === 2,
-      'duration-500': fadeIn && duration === 3,
-      'duration-300': fadeIn && duration === 4
+    <div ref={ref} className={classNames('opacity-0 transform transition ease-out', {
+      'opacity-100 translate-y-0': visible,
+      'translate-y-2/4': !visible,
+      'duration-1000': visible && duration === 1,
+      'duration-700': visible && duration === 2,
+      'duration-500': visible && duration === 3,
+      'duration-300': visible && duration === 4
     })}>
       {props.children}  
     </div>
