@@ -14,6 +14,7 @@ const ContextProvider: React.FC<Props> = (props) => {
     const ref = useRef<HTMLDivElement>(null)
 
     const [greeting, setGreeting] = useState<string>('')
+    // keep it this way for future updates
     const adjectives: string[] = ['Rocio']
 
   
