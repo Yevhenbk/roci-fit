@@ -1,6 +1,7 @@
 import { 
   createContext, useState, ReactNode, useEffect, useRef
  } from 'react'
+import { useRouter } from 'next/router'
 
 export const Context = createContext<any>('')
 
@@ -10,12 +11,19 @@ interface Props {
 
 const ContextProvider: React.FC<Props> = (props) => {
   
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState<boolean>(false)
     const ref = useRef<HTMLDivElement>(null)
 
     const [greeting, setGreeting] = useState<string>('')
+    const [calling, setCalling] = useState<string>('')
     // keep it this way for future updates
-    const adjectives: string[] = ['Rocio']
+    const name: string = 'Rocío'
+    const adjectives: string[] = ['my pretty', 'my chichuna pink',
+    'mi perrito feo', 'el amor de mi vida']
+
+    const [section, setSection] = useState<boolean>(false)
+
+    const router = useRouter()
 
   
     useEffect(() => {
@@ -26,7 +34,8 @@ const ContextProvider: React.FC<Props> = (props) => {
   
       const randomAdjective: string = adjectives[Math.floor(Math.random() * adjectives.length)]
       
-      setGreeting(`Good ${timeOfDay} ${randomAdjective}`)  
+      setGreeting(`Good ${timeOfDay} ${name}`)  
+      setCalling(`What does ${randomAdjective} feel like doing today?`)
 
       const observer = new IntersectionObserver(
         ([entry]) => {
@@ -50,7 +59,8 @@ const ContextProvider: React.FC<Props> = (props) => {
 
   return (
     <Context.Provider 
-      value={{ ref, visible, greeting }}
+      value={{ ref, visible, greeting, calling,
+      section, setSection, router }}
     >
       {props.children}
     </Context.Provider>
