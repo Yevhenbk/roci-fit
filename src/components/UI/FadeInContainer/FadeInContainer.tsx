@@ -13,7 +13,8 @@ const FadeInContainer: FC<Props> = (props) => {
   const duration: 1 | 2 | 3 | 4 = props.duration
 
   return (
-    <div ref={ref} className={classNames('opacity-0 transform transition ease-out', {
+    <div ref={ref} className={classNames('opacity-0 transform transition ease-out',
+    'flex flex-col justify-center items-center', {
       'opacity-100 translate-y-0': visible,
       'translate-y-2/4': !visible,
       'duration-1000': visible && duration === 1,
