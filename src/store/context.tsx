@@ -12,8 +12,21 @@ const ContextProvider: React.FC<Props> = (props) => {
   
     const [visible, setVisible] = useState(false)
     const ref = useRef<HTMLDivElement>(null)
+
+    const [greeting, setGreeting] = useState<string>('')
+    const adjectives: string[] = ['Rocio']
+
   
     useEffect(() => {
+      const timeOfDay: string = new Date().getHours() < 12 
+      ? 'afternoon' 
+      : new Date().getHours() < 18 ? 'afternoon' 
+      : 'evening'
+  
+      const randomAdjective: string = adjectives[Math.floor(Math.random() * adjectives.length)]
+      
+      setGreeting(`Good ${timeOfDay} ${randomAdjective}`)  
+
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -36,7 +49,7 @@ const ContextProvider: React.FC<Props> = (props) => {
 
   return (
     <Context.Provider 
-      value={{ ref, visible }}
+      value={{ ref, visible, greeting }}
     >
       {props.children}
     </Context.Provider>
