@@ -13,7 +13,7 @@ const ChestAndShouldersTemplate: FC = () => {
     <ContentWrapper>
       <Header title='Legs Exercises' description='The list of the most 
       useful exercises categorized by muscle groups.' />
-      <div className='text-center flex flex-col gap-8'>
+      <div className='text-center flex flex-col gap-8 mb-12'>
         <h2 className='text-xl text-gray-900 font-extrabold'>
           Chest
         </h2>

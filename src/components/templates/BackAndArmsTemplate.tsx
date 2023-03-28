@@ -25,7 +25,7 @@ const BackAndArmsTemplate: FC = () => {
           ))}
         </div>
       </div>
-      <div className='text-center flex flex-col gap-8'>
+      <div className='text-center flex flex-col gap-8 mb-12'>
         <h2 className='text-xl text-gray-900 font-extrabold'>
           Biceps
         </h2>
