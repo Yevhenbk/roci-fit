@@ -17,7 +17,7 @@ const Header: FC<Props> = (props) => {
       <h1 className='text-2xl text-gray-900  font-extrabold max-[1036px]:w-[20rem]'>
         {props.title}
       </h1>
-      <div className='flex flex-col items-stretch w-[18rem]'>   
+      {/* <div className='flex flex-col items-stretch w-[18rem]'>   
         <Button intent='secondary' fullWidth={true} onClick={() => {
         setSection(true)
         setTimeout(() => {
@@ -31,8 +31,9 @@ const Header: FC<Props> = (props) => {
           group-hover:left-0'/>
           <p className='font-medium pr-4'>Go back</p>
         </Button>
-      </div> 
-      <h3 className='text-sm text-gray-700 text-center font-bold w-[80%]'>
+      </div>  */}
+      <h3 className='text-sm text-gray-700 text-center font-bold p-4 rounded-lg border-2 
+      border-solid border-gray-200 w-[80%] bg-[#eaeff1]'>
         {props.description}
       </h3>
     </div>
