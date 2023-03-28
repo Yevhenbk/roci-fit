@@ -14,7 +14,7 @@ const Header: FC<Props> = (props) => {
 
   return (
     <div className='flex flex-col gap-8 text-center items-center'>
-      <h1 className='text-3xl text-gray-900  font-extrabold max-[1036px]:w-[22rem]'>
+      <h1 className='text-2xl text-gray-900  font-extrabold max-[1036px]:w-[20rem]'>
         {props.title}
       </h1>
       <div className='flex flex-col items-stretch w-[18rem]'>   

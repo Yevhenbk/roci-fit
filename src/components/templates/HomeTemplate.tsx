@@ -17,7 +17,7 @@ const HomeTemplate: FC = () => {
         'translate-y-6': section})}>
           <div className='flex flex-col gap-8 text-center items-center'>
             <FadeInContainer duration={4}>
-              <h1 className='text-3xl text-gray-900  font-extrabold max-[1036px]:w-[22rem]'>
+              <h1 className='text-2xl text-gray-900  font-extrabold max-[1036px]:w-[20rem]'>
                 {greeting}
               </h1>
             </FadeInContainer>
@@ -27,7 +27,7 @@ const HomeTemplate: FC = () => {
               </h3>
             </FadeInContainer>
           </div>
-        <div className='flex flex-col items-stretch gap-5 min-w-[22rem]'>
+        <div className='flex flex-col items-stretch gap-5 min-w-[18rem]'>
           <FadeInContainer duration={4}>
             <Button intent='secondary' fullWidth={true} onClick={() => {
               setSection(true)
