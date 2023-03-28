@@ -33,7 +33,7 @@ const Header: FC<Props> = (props) => {
         </Button>
       </div>  */}
       <h3 className='text-sm text-gray-700 text-center font-bold p-4 rounded-lg border-2 
-      border-solid border-gray-200 w-[80%] bg-[#eaeff1]'>
+      border-solid border-gray-300 w-[80%] bg-[#eaeff1]'>
         {props.description}
       </h3>
     </div>
