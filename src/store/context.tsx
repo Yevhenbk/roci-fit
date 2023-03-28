@@ -16,7 +16,6 @@ const ContextProvider: React.FC<Props> = (props) => {
 
     const [greeting, setGreeting] = useState<string>('')
     const [calling, setCalling] = useState<string>('')
-    // keep it this way for future updates
     const name: string = 'Rocío'
     const adjectives: string[] = ['my pretty', 'my chichuna pink',
     'mi perrito feo', 'el amor de mi vida']
@@ -35,7 +34,7 @@ const ContextProvider: React.FC<Props> = (props) => {
       const randomAdjective: string = adjectives[Math.floor(Math.random() * adjectives.length)]
       
       setGreeting(`Good ${timeOfDay} ${name}`)  
-      setCalling(`What does ${randomAdjective} feel like doing today?`)
+      setCalling(`What does ${randomAdjective} feel like training today?`)
 
       const observer = new IntersectionObserver(
         ([entry]) => {

@@ -2,7 +2,8 @@ import { cva } from 'class-variance-authority'
 
 export const buttonStyles = cva(
   ['text-xl rounded-full p-4 group flex items-center justify-between',
-  'relative transition duration-1000 transform transition ease-out'],
+  'relative transition duration-1000 transform transition ease-out',
+  'shadow-sm'],
   {
     variants: {
       intent: {

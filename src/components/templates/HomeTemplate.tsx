@@ -14,7 +14,7 @@ const HomeTemplate: FC = () => {
       <div className={classNames('opacity-0 transform transition ease-out flex flex-col gap-14',
       'duration-300 justify-center items-center h-[100vh] w-[100vw]', {
         'opacity-100 translate-y-0': !section,
-        'translate-y-1/4': section})}>
+        'translate-y-6': section})}>
           <div className='flex flex-col gap-8 text-center items-center'>
             <FadeInContainer duration={4}>
               <h1 className='text-3xl text-gray-900  font-extrabold max-[1036px]:w-[22rem]'>
@@ -32,6 +32,9 @@ const HomeTemplate: FC = () => {
             <Button intent='secondary' fullWidth={true} onClick={() => {
               setSection(true)
               setTimeout(() => {
+                setSection(false);
+              }, 1000)
+              setTimeout(() => {
                 router.push('/legs')
               }, 300)
               }}>
@@ -43,6 +46,9 @@ const HomeTemplate: FC = () => {
           <FadeInContainer duration={3}>
             <Button fullWidth={true} onClick={() => {
               setSection(true)
+              setTimeout(() => {
+                setSection(false);
+              }, 1000)
               setTimeout(() => {
                 router.push('/back&arms')
               }, 300)
@@ -56,6 +62,9 @@ const HomeTemplate: FC = () => {
             <Button intent='teritary' fullWidth={true} onClick={() => {
               setSection(true)
               setTimeout(() => {
+                setSection(false);
+              }, 1000)
+              setTimeout(() => {
                 router.push('/chest&shoulders')
               }, 300)
               }}>
@@ -67,6 +76,9 @@ const HomeTemplate: FC = () => {
           <FadeInContainer duration={1}>
             <Button intent='quaternary' fullWidth={true} onClick={() => {
               setSection(true)
+              setTimeout(() => {
+                setSection(false);
+              }, 1000)
               setTimeout(() => {
                 router.push('/abs')
               }, 300)
