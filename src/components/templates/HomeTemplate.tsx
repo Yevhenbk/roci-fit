@@ -88,6 +88,21 @@ const HomeTemplate: FC = () => {
               group-hover:right-0'/>
             </Button>
           </FadeInContainer>  
+          {/* <FadeInContainer duration={1}>
+            <Button intent='quinary' fullWidth={true} onClick={() => {
+              setSection(true)
+              setTimeout(() => {
+                setSection(false);
+              }, 1000)
+              setTimeout(() => {
+                router.push('/abs')
+              }, 300)
+              }}>
+              <p className='font-medium pl-4'>Abs</p>
+              <BsArrowRight className='relative duration-300 right-4 text-2xl 
+              group-hover:right-0'/>
+            </Button>
+          </FadeInContainer>  */}
         </div>
       </div>
     </>

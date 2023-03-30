@@ -12,7 +12,7 @@ const BackAndArmsTemplate: FC = () => {
 
   return (
     <ContentWrapper>
-      <Header title='Legs Exercises' description='The list of the most 
+      <Header title='Back and Arms Exercises' description='The list of the most 
       useful exercises categorized by muscle groups.' />
       <div className='text-center flex flex-col gap-8'>
         <h2 className='text-xl text-gray-900 font-extrabold'>

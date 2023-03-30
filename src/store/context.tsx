@@ -27,7 +27,7 @@ const ContextProvider: React.FC<Props> = (props) => {
   
     useEffect(() => {
       const timeOfDay: string = new Date().getHours() < 12 
-      ? 'afternoon' 
+      ? 'morning' 
       : new Date().getHours() < 18 ? 'afternoon' 
       : 'evening'
   
