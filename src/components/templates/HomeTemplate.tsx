@@ -28,47 +28,47 @@ const HomeTemplate: FC = () => {
             </FadeInContainer>
           </div>
         <div className='flex flex-col items-stretch gap-5 min-w-[18rem]'>
-          <FadeInContainer duration={4}>
+          <FadeInContainer duration={2}>
             <Button intent='secondary' fullWidth={true} onClick={() => {
               setSection(true)
               setTimeout(() => {
                 setSection(false);
               }, 1000)
               setTimeout(() => {
-                router.push('/legs')
+                router.push('/squat&press')
               }, 300)
               }}>
-              <p className='font-medium pl-4'>Legs</p>
+              <p className='font-medium text-lg pl-4'>Squat & Power Press</p>
               <BsArrowRight className='relative duration-300 right-4 text-2xl 
               group-hover:right-0'/>
             </Button>
           </FadeInContainer>
-          <FadeInContainer duration={3}>
+          <FadeInContainer duration={1}>
             <Button fullWidth={true} onClick={() => {
               setSection(true)
               setTimeout(() => {
                 setSection(false);
               }, 1000)
               setTimeout(() => {
-                router.push('/back&arms')
+                router.push('/posteriorChain')
               }, 300)
               }}>
-              <p className='font-medium pl-4'>Back & Arms</p>
+              <p className='font-medium text-lg pl-4'>Posterior Chain</p>
               <BsArrowRight className='relative duration-300 right-4 text-2xl 
               group-hover:right-0'/>
             </Button>
           </FadeInContainer>  
-          <FadeInContainer duration={2}>
+          <FadeInContainer duration={1}>
             <Button intent='teritary' fullWidth={true} onClick={() => {
               setSection(true)
               setTimeout(() => {
                 setSection(false);
               }, 1000)
               setTimeout(() => {
-                router.push('/chest&shoulders')
+                router.push('/arms&isolation')
               }, 300)
               }}>
-              <p className='font-medium pl-4'>Chest & Shoulders</p>
+              <p className='font-medium text-lg pl-4'>Arms & Isolation</p>
               <BsArrowRight className='relative duration-300 right-4 text-2xl 
               group-hover:right-0'/>
             </Button>
@@ -80,29 +80,14 @@ const HomeTemplate: FC = () => {
                 setSection(false);
               }, 1000)
               setTimeout(() => {
-                router.push('/abs')
+                router.push('/quadBlast')
               }, 300)
               }}>
-              <p className='font-medium pl-4'>Abs</p>
+              <p className='font-medium text-lg pl-4'>Quad Blast</p>
               <BsArrowRight className='relative duration-300 right-4 text-2xl 
               group-hover:right-0'/>
             </Button>
           </FadeInContainer>  
-          {/* <FadeInContainer duration={1}>
-            <Button intent='quinary' fullWidth={true} onClick={() => {
-              setSection(true)
-              setTimeout(() => {
-                setSection(false);
-              }, 1000)
-              setTimeout(() => {
-                router.push('/abs')
-              }, 300)
-              }}>
-              <p className='font-medium pl-4'>Abs</p>
-              <BsArrowRight className='relative duration-300 right-4 text-2xl 
-              group-hover:right-0'/>
-            </Button>
-          </FadeInContainer>  */}
         </div>
       </div>
     </>

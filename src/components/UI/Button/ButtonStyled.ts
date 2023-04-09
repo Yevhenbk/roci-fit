@@ -10,8 +10,7 @@ export const buttonStyles = cva(
         primary: 'bg-[#A4D2EB] text-[#57A6CA]',
         secondary: 'bg-[#FEAFE7] text-pink-700',
         teritary: 'bg-[#CFABF8] text-white',
-        quaternary: 'bg-[#B3CB6C] text-green-700',
-        quinary: 'bg-[#F7F052] text-black'
+        quaternary: 'bg-[#FED8C5] text-[#FE7F5F]'
       },
       fullWidth: {
         true: 'w-[100%]'
